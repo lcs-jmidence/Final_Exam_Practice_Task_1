@@ -25,13 +25,27 @@ import PlaygroundSupport
 let canvas = Canvas(width: 400, height: 600)
 
 // Begin your solution here...
-
+canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 15)
 // REMINDER: here's how to create a square with a fill
-canvas.fillColor = Color(hue: 56, saturation: 7, brightness: 56, alpha: 100)
-canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 50, height: 50)
+canvas.fillColor = Color(hue: 191, saturation: 100, brightness: 85, alpha: 100)
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 400, height: 600)
+for y in stride(from: -48, to: 300, by: 7) {
+    canvas.drawText(message: "blur", size: 200, x: 10, y: y, kerning: 0)
+}
+canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+canvas.drawText(message: "blur", size: 200, x: 10, y: 275, kerning: 0)
+canvas.drawText(message: "sartuday", size: 10, x: 20, y: 550)
+canvas.drawText(message: "october 16 1993 / 8 pm", size: 10, x: 20, y: 540)
+canvas.drawText(message: "mandela hall", size: 10, x: 145, y: 550)
+canvas.drawText(message: "at university of sussex", size: 10, x: 145, y: 540)
+canvas.drawText(message: "special guest", size: 10, x: 270, y: 550)
+canvas.drawText(message: "salad,plus my life story", size: 10, x: 270, y: 540)
+
+
+
 
 // REMINDER: here's how to create text in a certain location
-canvas.drawText(message: "blur", size: 96, x: 100, y: 150, kerning: 0)
+
 // HINT: You can use the kerning property to change the distance between letters
 //       Try adjusting the value to positive or negative values. What happens?
 
